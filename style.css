@@ -1925,7 +1925,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-		left: -75px;
+		/* left: -75px; */
 		font-size: 15px;
 		z-index: 2;
 	}
@@ -1941,7 +1941,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-		left: -70px;
+		left: 10px;
 	}
 }
 @media (max-width: 780px ) {
@@ -1975,7 +1975,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-		left: 35px;
+		left: 15px;
 	}
 }
 @media (max-width: 760px ) {
@@ -2014,7 +2014,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-	    left: -35px;
+	    left: 5px;
 	}
 }
 @media (max-width: 620px ) {
@@ -2036,7 +2036,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-		left: -95px;
+		left: 5px;
 	}
 
 }
@@ -2071,7 +2071,7 @@ html,body {
 		/* margin-top: 45px; */
 		position: relative;
 		top: 25px;
-		left: 50px;
+		left: 20px;
 	}
 }
 @media (max-width: 400px ) {
@@ -2130,7 +2130,7 @@ html,body {
 		text-decoration: none;
 		/* margin-top: 45px; */
 		position: relative;
-		left: -35px;
+		left: 15px;
 	}
 }
 @media (max-width: 280px ) {
@@ -2201,11 +2201,15 @@ html,body {
 }
 .buton{
 
-	margin-left: 190px;
-	background-color: #1089a1;
+	/* margin-left: 190px; */
+	width: 150px;
+	background-color: #d9232d;
 	color: #FFF;
 	text-decoration: none;
 	border-radius: 7px;
+	position: relative;
+	top: 90px;
+margin-top: 10px;
 }
 .meet2 .buton:hover{
 	text-decoration: none;
