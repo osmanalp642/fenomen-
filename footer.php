@@ -49,9 +49,9 @@
 										<div class="title-widget-cursive">Fenomen Barbers Club</div>
 									</div>
 									<ul class="contact-widget" >
-										<li class="fphone">+387 123 456, +387 123 456 <br> +387 123 456</li>
-										<li class="fmobile">+387-123-456-1<br>+387-123-456-2</li>
-										<li class="fmail lastone">your@email.com<br>customer.care@mail.com</li>
+										<li class="fphone"><?php echo $islem['ayar_tel'] ?></li>
+										<li class="fmobile"><?php echo $islem['ayar_gsm'] ?></li>
+										<li class="fmail lastone"><?php echo $islem['ayar_mail'] ?></li>
 									</ul>
 								</div>
 								<!--footer contact widget-->
@@ -85,11 +85,11 @@
 									<!--footer Share-->
 									<div class="followon">Takip Et !</div>
 									<div class="fsoc">
-										<a href="http://twitter.com/minimalthemes" class="ftwitter">twitter</a>
-										<a href="http://www.facebook.com/pages/Minimal-Themes/264056723661265"
+										<a href="http://<?php echo $islem['ayar_twitter'] ;?>" class="ftwitter">twitter</a>
+										<a href="http://<?php echo $islem['ayar_facebook']; ?>"
 											class="ffacebook">facebook</a>
-										<a href="#" class="fflickr">flickr</a>
-										<a href="#" class="ffeed">feed</a>
+										<a href="https://<?php echo $islem['ayar_google'] ?>" class="fflickr">flickr</a>
+										<a href="https://<?php echo $islem['ayar_youtube'] ?>" class="ffeed">feed</a>
 										<div class="clearfix"></div>
 									</div>
 									<div class="clearfix"></div>

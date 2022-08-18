@@ -1,0 +1,3 @@
+RewriteEngine on 
+#RewriteRule ^urun([0-9a-zA-Z-_]+) urun-detay.php?sef=$1$urun_id=$2 [L,QSA]
+RewriteRule ^urun([0-9a-zA-Z-_]+) urun-detay.php?sef=$1 [L,QSA]

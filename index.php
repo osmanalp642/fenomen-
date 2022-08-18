@@ -1,35 +1,35 @@
 <?php include'header.php'?>
+<?php 
+$urunsor = $db->prepare("SELECT * from urun where urun_id limit 6");
+$urunsor->execute(array());
+$slidersor = $db->prepare("SELECT * from slider order by slider_id ASC");
+$slidersor->execute(array());
+$kategorisor = $db->prepare("SELECT * from urun order by urun_id ASC");
+$kategorisor->execute(array());
+?>
 <div class="container">
 
 <div class="clearfix"></div>
 <div class="lines"></div>
 <div class="main-slide">
-    <div id="sync1" class="owl-carousel">
+    <div id="sync1" class="owl-carousel" style="display: block;">
         <div class="item">
             <div class="slide-desc">
                 <div class="inner">
 
                 </div>
                 <div class="inner">
-
+                    
+                    </div>
                 </div>
-            </div>
+                <?php while ($slidercek = $slidersor->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="slide-type-1">
-                <img src="images/slider1.png" alt="" class="img-responsive slider-img ">
+                <img src="<?php echo $slidercek['slider_resim']?>" alt="" class="img-responsive slider-img ">
             </div>
         </div>
-        <div class="item">
-            <div class="slide-desc">
-                <div class="inner">
-
-                </div>
-                <div class="inner">
-
-                </div>
-            </div>
-            <div class="slide-type-1">
-                <img src="images/slider2.jpg" alt="" class="img-responsive slider-img">
-            </div>
+            <?php }?>
+    
+           
         </div>
 
 
@@ -46,104 +46,18 @@
             </div>
         </div>
         <div id="product-carousel" class="owl-carousel owl-theme">
+        <?php while ($kategoricek = $kategorisor->fetch(PDO::FETCH_ASSOC)) { ?>
             <div class="item">
                 <div class="productwrap">
                     <div class="pr-img">
-                        <a href="#"><img src="images/saç+sakal.jpg" alt=""class="img-responsive meet1"></a>
+                      
+                        <a href="#"><img src="<?php echo $kategoricek['urun_resim']?>" alt=""class="img-responsive meet1"></a>
                     </div>
-                    <span class="smalltitle"><a href="#">Nikon Camera</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
+                    
                 </div>
             </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/saç.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Black Shoes</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/yen.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/damat.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Nikon Camera</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/renklendirme.jpg" alt=""class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Black Shoes</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/çocuk.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/perma.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Nikon Camera</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/kaş tasarımı.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/V.İ.P.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/boşluk.jpg" alt=""class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
-            </div>
-            <div class="item">
-                <div class="productwrap">
-                    <div class="pr-img">
-                        <a href="#"><img src="images/cilt.jpg" alt="" class="img-responsive meet1"></a>
-                    </div>
-                    <span class="smalltitle"><a href="#">Red T-Shirt</a></span>
-                    <span class="smalldesc">Item no.: 1000</span>
-                </div>
+            <?php }?>
+           
             </div>
         </div>
     </div>
@@ -172,100 +86,31 @@
                 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                 cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <a href="" class="btn btn-default btn-red btn-sm text-center">Read More</a>
+            
 
             <div class="title-bg">
                 <div class="title">Randevu Al</div>
             </div>
+            <div class="container">
             <div class="row prdct">
                 <!--Products-->
+                <?php
+			while ($uruncek = $urunsor->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="col-md-4">
-                    <div class="productwrap meet2">
+                    <div class="productwrap meet2" style="margin-left: -5px">
                         <div class="pr-img">
-                            <a href="#"><img src="images/saç+sakal.jpg" alt=""
+                            <a href="urun-detay.php?urun=<?php echo $uruncek['urun_id']?>"><img src="<?php echo $uruncek['urun_resim']?>" alt=""
                                 class="img-responsive meet"></a>
                             </div>
-                            <span class="smalltitle"><a href="#">Saç+Sakal(60dk)</a></span>
-                            <button href="#" class="buton">Randevu </button>
-                        <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
+                            <span class="smalltitle" style="width: 220px;"><a href="urun-detay.php?urun=<?php echo $uruncek['urun_id']?>"><?php echo $uruncek['urun_ad']?></a></span>
+                            <button href="#" class="buton"><a href="urun-detay.php?urun=<?php echo $uruncek['urun_id']?>" style="color: #fff; text-decoration: none;" >Randevu</a>  </button>
+                        <p style="margin-top: -40px; padding: 10px;"><?php echo $uruncek['urun_fiyat']?> ₺</p>
                             
                         </div>
                     </div>
-                    <div class="col-md-4">
-                    <div class="productwrap  meet2">
-                        <div class="pr-img">
-                            <a href="product.htm"><img src="images/anatomik.jpg" alt=""
-                                    class="img-responsive meet"></a>
-                        </div>
-                        <span class="smalltitle"><a href="product.htm">Anatomik kesim(45dk)</a></span>
-                        <button href="#" class="buton">Randevu </button>
-                        <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-
-
-                        <!-- <span class="smalldesc">Item no.: 1000</span> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="productwrap meet2">
-                        <div class="pr-img">
-                            <a href="product.htm"><img src="images/saç.jpg" alt=""
-                                    class="img-responsive meet"></a>
-                        </div>
-                        <span class="smalltitle"><a href="product.htm">SAÇ KESİM(40dk)</a></span>
-                        <button href="#" class="buton">Randevu </button>
-                        <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-
-                        
-                        <!-- <span class="smalldesc">Item no.: 1000</span> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="productwrap  meet2">
-                        <div class="pr-img">
-                            <a href="product.htm"><img src="images/renklendirme.jpg" alt=""
-                                    class="img-responsive meet"></a>
-
-                                    <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-
-                        </div>
-                        <span class="smalltitle"><a href="product.htm">Renklendirme(120dk)</a></span>
-                        <button align="right" href="#" class="buton">Randevu </button>
-                        <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-
-                        
-                        <!-- <span class="smalldesc">Item no.: 1000</span> -->
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="productwrap  meet2">
-                        <div class="pr-img">
-                            <a href="product.htm"><img src="images/damat.jpg	" alt=""
-                                    class="img-responsive meet"></a>
-                        </div>
-                        <span class="smalltitle" style="width: 330px; font-size: 12px;"><a href="product.htm">DAMAT DÜĞÜN
-                            TRAŞ VE MAKYAJ (150dk)</a></span>
-                            
-                            <!-- <span class="smalldesc">Item no.: 1000</span> -->
-                            <button href="#" class="buton">Randevu </button>
-                            <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-
-
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="productwrap  meet2">
-                        <div class="pr-img">
-                            <a href="product.htm"><img src="images/perma.jpg" alt=""
-                                    class="img-responsive meet"></a>
-                        </div>
-                        <span class="smalltitle" style="width: 250px;"><a
-                                href="product.htm">PERMA(150dk)(kesim dahil)</a></span>
-                                <button href="#" class="buton">Randevu </button>
-                                <p style="margin-top: -40px; padding: 10px;">300 ₺</p>
-                        <!-- <span class="smalldesc">Item no.: 1000</span> -->
-
-                    </div>
-                </div>
+                    <?php
+			} ?>
+            </div>
             </div>
             <!--Products-->
             <div class="spacer"></div>
